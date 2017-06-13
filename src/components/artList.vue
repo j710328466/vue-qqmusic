@@ -12,10 +12,6 @@
       <div class="mod_part">
         <div class="part_hd">
           <h2>热门歌曲</h2>
-          <a href="#" class="part_more js_goto_tab">
-            全部
-            <i class="icon_part_arrow sprite"></i>
-          </a>
         </div>
         <div class="mod_songlist">
           <ul class="songlist__header">
@@ -34,9 +30,6 @@
 
                     </audio> -->
                     <i class="song_play" @click="playSong(index)"></i>
-                  </router-link>
-                  <router-link to="npm">
-                    <i class="song_download"></i>
                   </router-link>
                 </div>
               </div>
@@ -64,16 +57,7 @@ import {mapState} from 'vuex'
       ])
     },
     mounted () {
-      console.log(this.songList[1]);
-    //   this.axios.get(`http://localhost:3000/search?keywords=${this.$route.query.keyword}`)
-    //     .then(res => {
-    //       res.data.result.songs.forEach(item => {
-    //           // song.name = item.name,
-    //           // song.url = item.mp3Url,
-    //           this.songList.push(item)
-    //       })
-    //       console.log(this.songList)
-    //     })
+
     },
     methods: {
       iconShow: function () {
@@ -191,6 +175,7 @@ import {mapState} from 'vuex'
       }
       .song_play:hover {
         background-position: -40px 0;
+        transform: scale(1.2);
       }
       .song_download {
         background-position: 0 -120px;

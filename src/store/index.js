@@ -7,6 +7,7 @@ import  mutations from './mutations'
 import * as mutations_types from './mutations_types'
 
 Vue.use(Vuex)
+
 const store = new Vuex.Store({
   state,
   actions,

@@ -18,14 +18,14 @@
             <a href="" class="singer">{{songList[id].artists[0].name}}</a>
           </div>
           <div class="play_music_time">
-            <p class="startT">00:00</p>
-            :
+            <p class="startT">00:00 </p>
+            -
             <p class="endT">{{(songList[id].mMusic.playTime/60000).toFixed(2)}}</p>
           </div>
           <div class="player_progress">
             <div class="player_progress__inner">
               <div class="player_progress__load"></div>
-              <div class="player_progress__play">
+              <div class="player_progress__play" >
                 <i class="player_progress__dot"></i>
               </div>
             </div>
@@ -43,7 +43,7 @@
         </div>
       </div>
     </div>
-    <audio :src="songList[id].mp3Url" autoplay="false"></audio>
+    <audio :src="songList[id].mp3Url" autoplay ></audio>
   </div>
 </template>
 
@@ -52,8 +52,8 @@ import {mapState} from 'vuex'
   export default {
     data () {
       return {
-        audio: '',
         id: '',
+        audio: ''
       }
       // audio: this.$store.state.audio
     },
@@ -63,12 +63,14 @@ import {mapState} from 'vuex'
       ])
     },
     mounted() {
+      this.audio = document.querySelector('audio1')
+      console.log(this.audio);
       this.id = this.$route.params.id
-      console.log(this.id)
-      console.log(this.songList[this.id])
     },
     methods () {
-
+      // play: function() {
+      //   this.id
+      // }
     }
   }
 </script>
@@ -182,11 +184,14 @@ import {mapState} from 'vuex'
     }
     .play_music_time {
       position: absolute;
-      width: 100px;
+      width: px;
       top: 0;
       right: 0;
-      p {
+      .startT {
         float: left;
+      }
+      .endT {
+        float: right;
       }
     }
     .player_progress {

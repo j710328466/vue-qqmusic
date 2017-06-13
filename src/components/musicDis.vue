@@ -15,6 +15,7 @@
   export default {
     data () {
       return {
+        index: ''
       }
     },
     components: {
@@ -22,6 +23,9 @@
       'v-event': event,
       'v-toplist': topList,
       'v-taolist': taoList
+    },
+    mounted() {
+      this.$store.commit('changeLinkIndex', 1)
     }
   }
 </script>

@@ -19,7 +19,7 @@
       <div class="mod_index_tab">
         <a href="" class="index_tab__item js_tab" v-for="item in navList">{{item}}</a>
       </div>
-      <el-carousel :interval="5000" arrow="always" indicator-position="outside" height="500px" >
+      <el-carousel :interval="5000" arrow="always" indicator-position="outside" height="450px" >
         <el-carousel-item v-for="item in 4" :key="item"">
           <div class="mod_playlist mod_slide">
             <ul class="playlist__list slide__list" id="albumlist" style="left:-1200px;">
@@ -50,41 +50,6 @@
           </div>
         </el-carousel-item>
       </el-carousel>
-
-      <div class="mod_slide_switch js_switch">
-        <a href="" class="js_jump slide_switch__item">
-          <i class="slide_switch__bg"></i>
-          <i class="icon_txt">1</i>
-        </a>
-        <a href="" class="js_jump slide_switch__item">
-          <i class="slide_switch__bg"></i>
-          <i class="icon_txt">1</i>
-        </a>
-        <a href="" class="js_jump slide_switch__item">
-          <i class="slide_switch__bg"></i>
-          <i class="icon_txt">1</i>
-        </a>
-        <a href="" class="js_jump slide_switch__item">
-          <i class="slide_switch__bg"></i>
-          <i class="icon_txt">1</i>
-        </a>
-      </div>
-    </div>
-    <div class="mod_slide_action" id="mod_slide_action">
-      <div class="slide_action slide_action--left">
-        <a href="javascript:;" class="slide_action__btn
-          slide_action__btn--left js_jump">
-            <i class="icon_txt">上一页</i>
-            <i class="slide_action__arrow slide_action__arrow--left"></i>
-          </a>
-      </div>
-      <div class="slide_action slide_action--right">
-        <a href="javascript:;" class="slide_action__btn
-          slide_action__btn--right js_jump">
-            <i class="icon_txt">下一页</i>
-            <i class="slide_action__arrow slide_action__arrow--right"></i>
-          </a>
-      </div>
     </div>
   </div>
 </template>

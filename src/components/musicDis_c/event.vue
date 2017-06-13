@@ -36,7 +36,6 @@
           res.data.banners.forEach(item => {
            this.banner.push(item)
          })
-         console.log(this.banner)
        })
     }
   }

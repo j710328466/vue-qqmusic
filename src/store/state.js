@@ -1,5 +1,7 @@
 const state = {
-  songList: []
+  songList: [],
+  linkIndex: 1,
+  isLogin: false
 }
 
 export default state

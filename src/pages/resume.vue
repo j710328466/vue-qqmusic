@@ -4,8 +4,11 @@
 <script>
   export default {
     data () {
-      return {    
+      return {
       }
+    },
+    mounted() {
+      this.$store.commit('changeLinkIndex', 3)
     }
   }
 </script>

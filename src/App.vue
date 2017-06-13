@@ -19,7 +19,7 @@ export default {
     vFoot
   },
   mounted () {
-    console.log(this.$route.path)
+    console.log(this.$router)
   }
 
 }
