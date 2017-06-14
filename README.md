@@ -39,6 +39,8 @@ npm run start
   * scss（原来想用stylus,回头看看我都快写完了...）
   * axios（我等下要重点讲这玩意儿..）
    
+   
+   
 >    ![](https://ooo.0o0.ooo/2017/06/14/59413c23f2495.gif)
     
 * 组件库 
@@ -82,28 +84,29 @@ npm run start
     
     跨域访问，简单来说就是 A 网站的 javascript 代码试图访问 B 网站，包括提交内容和获取内容。由于安全原因，跨域访问是被各大浏览器所默认禁止的。
     
-    ①· 针对本地相同端口服务器之间的跨域
+    1. 针对本地相同端口服务器之间的跨域
     
        这是我刚开始碰到问题时使用的第一种，这个时候你只需要找到build文件中的dev-server，找到引用express的位置，给它加上一个头文件：
-       ```
-       # app.all('*', function (req, res, next) {
-        # res.header("Access-Control-Allow-Credentials", true)
-        # res.header("Access-Control-Allow-Origin", "*")
-        # res.header("Access-Control-Allow-Headers", "X-Requested-With")
-        # res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS")
-        # res.header("X-Powered-By", ' 3.2.1')
-        # res.header("Content-Type", "application/json;charset=utf-8")
-        # next()
-        # })
-        ```
+ 
+       `app.all('*', function (req, res, next) {
+          res.header("Access-Control-Allow-Credentials", true)
+          res.header("Access-Control-Allow-Origin", "*")
+          res.header("Access-Control-Allow-Headers", "X-Requested-With")
+          res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS")
+          res.header("X-Powered-By", ' 3.2.1')
+          res.header("Content-Type", "application/json;charset=utf-8")
+          next()
+        })
+        
+        `
        ![](https://ooo.0o0.ooo/2017/06/14/594140894d162.jpg)
        然后它就会报错~
        
-     *  针对本地不同端口的服务器之间的跨域
+     2. 针对本地不同端口的服务器之间的跨域
      
         *  就是将上面的头文件放在当前项目申请的服务器的那个api中。
         
-     ③· 针对本地服务器对域名服务器访问的跨域问题
+     3. 针对本地服务器对域名服务器访问的跨域问题
         
         找到当前项目congfig文件夹下index.js文件，然后在文件中将proxyTable内容改为：
         proxyTable: {
