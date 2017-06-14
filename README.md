@@ -86,22 +86,22 @@ npm run start
     
        这是我刚开始碰到问题时使用的第一种，这个时候你只需要找到build文件中的dev-server，找到引用express的位置，给它加上一个头文件：
        ```
-       app.all('*', function (req, res, next) {
-        res.header("Access-Control-Allow-Credentials", true)
-        res.header("Access-Control-Allow-Origin", "*")
-        res.header("Access-Control-Allow-Headers", "X-Requested-With")
-        res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS")
-        res.header("X-Powered-By", ' 3.2.1')
-        res.header("Content-Type", "application/json;charset=utf-8")
-        next()
-        })
+       # app.all('*', function (req, res, next) {
+        # res.header("Access-Control-Allow-Credentials", true)
+        # res.header("Access-Control-Allow-Origin", "*")
+        # res.header("Access-Control-Allow-Headers", "X-Requested-With")
+        # res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS")
+        # res.header("X-Powered-By", ' 3.2.1')
+        # res.header("Content-Type", "application/json;charset=utf-8")
+        # next()
+        # })
         ```
        ![](https://ooo.0o0.ooo/2017/06/14/594140894d162.jpg)
        然后它就会报错~
        
-     ②· 针对本地不同端口的服务器之间的跨域
+     *  针对本地不同端口的服务器之间的跨域
      
-        就是将上面的头文件放在当前项目申请的服务器的那个api中。
+        *  就是将上面的头文件放在当前项目申请的服务器的那个api中。
         
      ③· 针对本地服务器对域名服务器访问的跨域问题
         
