@@ -83,21 +83,21 @@ npm run start
     重点来了，这个是我在该项目中花了最多时间的地方，相信很多同学使用axios都碰到过我这个问题，目前我这里使用了三种方法处理该问题，请大家针对自己的项目问题对号入座
     
     > 跨域访问，简单来说就是 A 网站的 javascript 代码试图访问 B 网站，包括提交内容和获取内容。由于安全原因，跨域访问是被各大浏览器所默认禁止的。
-    
-    1. 针对本地相同端口服务器之间的跨域
-    
-       ①.这是我刚开始碰到问题时使用的第一种，这个时候你只需要找到build文件中的dev-server，找到引用express的位置，给它加上一个头文件：
+    
+①. 针对本地相同端口服务器之间的跨域
+   
+*  这是我刚开始碰到问题时使用的第一种，这个时候你只需要找到build文件中的dev-server，找到引用express的位置，给它加上一个头文件：
  
-       `app.all('*', function (req, res, next) {
-          res.header("Access-Control-Allow-Credentials", true)
-          res.header("Access-Control-Allow-Origin", "*")
-          res.header("Access-Control-Allow-Headers", "X-Requested-With")
-          res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS")
-          res.header("X-Powered-By", ' 3.2.1')
-          res.header("Content-Type", "application/json;charset=utf-8")
-          next()
-        })
-        `
+   `app.all('*', function (req, res, next) {
+    res.header("Access-Control-Allow-Credentials", true)
+    res.header("Access-Control-Allow-Origin", "*")
+    res.header("Access-Control-Allow-Headers", "X-Requested-With")
+    res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS")
+    res.header("X-Powered-By", ' 3.2.1')
+    res.header("Content-Type", "application/json;charset=utf-8")
+    next()
+    })
+    `
         
       > ![](https://ooo.0o0.ooo/2017/06/14/594140894d162.jpg)
        然后它就会报错~
