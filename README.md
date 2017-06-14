@@ -46,7 +46,7 @@ npm run build --report
 
 * 各页面的跳转
 
-    ![](https://ooo.0o0.ooo/2017/06/14/5941312c7e08a.gif)
+    ![](https://ooo.0o0.ooo/2017/06/14/59412958d13f9.gif)
 
 ## 核心功能组件实现
 
