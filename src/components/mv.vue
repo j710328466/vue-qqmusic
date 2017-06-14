@@ -12,6 +12,7 @@
       }
     },
     mounted() {
+      this.$store.commit('changeTagIndex', 4)
 
     },
     methods: {

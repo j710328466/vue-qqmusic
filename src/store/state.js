@@ -1,7 +1,9 @@
 const state = {
   songList: [],
   linkIndex: 1,
-  isLogin: false
+  tagLink: 1,
+  isLogin: false,
+  singer: []
 }
 
 export default state

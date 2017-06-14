@@ -187,6 +187,9 @@
 .top_subnav__link {
   cursor: auto;
 }
+.top_subnav__link--current {
+  color: #31c27c;
+}
 .top_subnav__link:hover {
   color: #31c27c;
 }
@@ -222,7 +225,12 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   padding-left: 15px;
+  line-height: 36px;
   padding-right: 15px;
+}
+.search_hot__link:hover {
+  background-color: #31c27c;
+  color: #fff;
 }
 .search_hot__link .search_hot__number {
   color: #ff4222;

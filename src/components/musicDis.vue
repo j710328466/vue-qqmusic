@@ -26,6 +26,7 @@
     },
     mounted() {
       this.$store.commit('changeLinkIndex', 1)
+      this.$store.commit('changeTagIndex', 1)
     }
   }
 </script>

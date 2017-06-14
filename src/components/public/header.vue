@@ -15,21 +15,21 @@
             <router-link class="top_nav_link" :class="{'top_nav_link--current': linkIndex==2}" to="/myMusic">我的音乐</router-link>
           </li>
           <li class="top_nav__item top_nav__item--down">
-            <router-link class="top_nav_link" :class="{'top_nav_link--current': linkIndex==3}" to="resume">我的简历</router-link>
+            <router-link class="top_nav_link" :class="{'top_nav_link--current': linkIndex==3}" to="resume">关于我</router-link>
           </li>
         </ul>
         <ul class="mod_top_subnav">
           <li class="top_subnav__item" >
-            <router-link to="/" class="top_subnav__link">首页</router-link>
+            <router-link to="/" class="top_subnav__link" :class="{'top_subnav__link--current': tagLink==1}">首页</router-link>
           </li>
           <li class="top_subnav__item" >
-            <router-link  to="/singer" class="top_subnav__link">歌手</router-link>
+            <router-link  to="/singer" class="top_subnav__link" :class="{'top_subnav__link--current': tagLink==2}">歌手</router-link>
           </li>
           <li class="top_subnav__item" >
-            <router-link  to="/cd" class="top_subnav__link">专辑</router-link>
+            <router-link  to="/cd" class="top_subnav__link" :class="{'top_subnav__link--current': tagLink==3}">专辑</router-link>
           </li>
           <li class="top_subnav__item" >
-            <router-link  to="/mv" class="top_subnav__link">MV</router-link>
+            <router-link  to="/mv" class="top_subnav__link" :class="{'top_subnav__link--current': tagLink==4}">MV</router-link>
           </li>
         </ul>
         <div class="mod_top_search" @mouseout="schleave">
@@ -51,7 +51,25 @@
                         <span class="search_hot__number">1</span>
                         <span class="search_hot__name">鹿晗</span>
                         <span class="search_hot__listen">100.6万</span>
-                      </a>
+                    </a>
+                    <a href="javascript:;" class="search_hot__link js_smartbox_search
+                      js_left" data-name="">
+                        <span class="search_hot__number">2</span>
+                        <span class="search_hot__name">薛之谦</span>
+                        <span class="search_hot__listen">80.6万</span>
+                    </a>
+                    <a href="javascript:;" class="search_hot__link js_smartbox_search
+                      js_left" data-name="">
+                        <span class="search_hot__number">3</span>
+                        <span class="search_hot__name">周杰伦</span>
+                        <span class="search_hot__listen">78.6万</span>
+                    </a>
+                    <a href="javascript:;" class="search_hot__link js_smartbox_search
+                      js_left" data-name="">
+                        <span class="search_hot__number">4</span>
+                        <span class="search_hot__name">bigbang</span>
+                        <span class="search_hot__listen">66.6万</span>
+                    </a>
                   </dd>
                 </dl>
               </div>
@@ -100,6 +118,9 @@ import {mapActions, mapState} from 'vuex'
     computed: {
       linkIndex () {
         return this.$store.state.linkIndex
+      },
+      tagLink () {
+        return this.$store.state.tagLink
       }
     },
     methods: {
@@ -109,9 +130,9 @@ import {mapActions, mapState} from 'vuex'
           this.axios.get(`http://localhost:3000/search?keywords=${keyword}`)
             .then(res => {
               // console.log(res.data.result.songs);
-              this.$store.dispatch('save_songList',res.data.result.songs)
+              this.$store.commit('save_songList', res.data.result.songs)
               this.$router.push({path: '/artList', query: {keyword: this.keyword}})
-              // console.log(this.songList)
+              console.log(this.songList)
             })
 
         } else {

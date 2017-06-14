@@ -63,8 +63,9 @@ import {mapState} from 'vuex'
       ])
     },
     mounted() {
+      // console.log(this.songList)
       this.audio = document.querySelector('audio1')
-      console.log(this.audio);
+      // console.log(this.audio);
       this.id = this.$route.params.id
     },
     methods () {

@@ -6,6 +6,9 @@
         <div class="data__cont">
           <div class="data__name">
             <h1>{{songList[0].artists[0].name}}</h1>
+            <p>歌手描述：暂无</p>
+            <p>歌曲年份：暂无</p>
+            <p>描述：暂无</p>
           </div>
         </div>
       </div>
@@ -40,6 +43,7 @@
         </div>
       </div>
     </div>
+    <div class="bottom-desc">到底啦~</div>
   </div>
 </template>
 
@@ -63,8 +67,8 @@ import {mapState} from 'vuex'
       iconShow: function () {
         let playlist = document.querySelectorAll('.mod_list_menu')
       },
-      playSong: function(index) {
-        // console.log(this.songList[index]);
+      playSong: function() {
+        console.log(this.songList[1])
 
       }
     }
@@ -120,7 +124,7 @@ import {mapState} from 'vuex'
   }
   .mod_songlist {
     font-size: 16px;
-    color: #000;
+    color: #363535;
     overflow: hidden;
     .songlist__header {
       height: 50px;
@@ -128,7 +132,8 @@ import {mapState} from 'vuex'
       color: #999;
       padding-left: 30px;
       padding-right: 100px;
-      background-color: #fbfbfd;
+      background-color: #cdcdcd;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, .4);
     }
     .songlist__header_name {
       float: left;
@@ -157,7 +162,8 @@ import {mapState} from 'vuex'
       height: 50px;
       line-height: 50px;
       &:nth-child(even) {
-        background-color: #fbfbfd;
+        background-color: #cdcdcd;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, .4);
       }
     }
     .mod_list_menu {
@@ -215,5 +221,21 @@ import {mapState} from 'vuex'
       color: #999;
     }
   }
-
+  .data__name {
+    h1 {
+      text-shadow: 2px 2px 1px rgba(77, 77, 77, .5);
+    }
+    p {
+      line-height: 35px;
+      font-size: 18px;
+      margin-left: 10px;
+    }
+  }
+  .bottom-desc {
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    margin: 20px;
+    opacity: .6;
+  }
 </style>

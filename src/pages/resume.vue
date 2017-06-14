@@ -1,4 +1,7 @@
 <template>
+  <div class="jzxer">
+
+  </div>
 </template>
 
 <script>
@@ -16,5 +19,6 @@
 <style lang="scss" scoped>
   .jzxer {
     height: 666px;
+    background-color: rgb(144, 144, 144)
   }
 </style>

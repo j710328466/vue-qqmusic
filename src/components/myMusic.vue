@@ -17,6 +17,7 @@ export default {
   },
   mounted() {
     this.$store.commit('changeLinkIndex', 2)
+    this.$store.commit('changeTagIndex', 1)
   },
   computed() {
     this.isLogin=this.$store.state.isLogin
