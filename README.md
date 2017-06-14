@@ -1,8 +1,8 @@
 # Vue2.0 仿qq音乐官网-pc端
-一直想做一个vue项目，然后我就做了
+一直想做一个vue项目 然后呢 我就做了
 
 ## 效果预览
-![](https://ooo.0o0.ooo/2017/06/11/593ce65f51ba3.gif)
+![](https://ooo.0o0.ooo/2017/06/14/59412958d13f9.gif)
 > 在线预览：[demo](https://uncleze2017.github.io/vue-didi-demo/index.html)
 
 > 项目地址：[github](https://github.com/uncleze2017/Imitation-DIDI-project)
