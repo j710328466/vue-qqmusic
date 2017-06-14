@@ -10,11 +10,11 @@
 
 ## Build Setup
 
-(可以用国内cnpm或yarn，更方便快捷，你值得拥有)
 
 ```
 # install dependencies
 cnpm i
+(可以用cnpm或yarn，更方便快捷，你值得拥有)
 
 # serve with hot reload at localhost:8564
 npm run dev
@@ -29,7 +29,7 @@ npm run build --report
 npm run start 
 
 ```
-
+ 
 * 技术栈
 
     * vue(数据绑定)
@@ -37,9 +37,9 @@ npm run start
     * vuex(管理组件状态，实现组件通信）
     * webpack(打包工具)
     * scss（原来想用stylus,回头看看我都快写完了...）
-    * exios（我等下要重点讲这玩意儿..）
-    
-    ![](https://ooo.0o0.ooo/2017/06/14/59413c23f2495.gif)
+    * axios（我等下要重点讲这玩意儿..）
+>   
+>    ![](https://ooo.0o0.ooo/2017/06/14/59413c23f2495.gif)
     
 * 组件库 
 
