@@ -97,7 +97,6 @@ npm run start
           res.header("Content-Type", "application/json;charset=utf-8")
           next()
         })
-        
         `
         
       > ![](https://ooo.0o0.ooo/2017/06/14/594140894d162.jpg)
@@ -109,17 +108,17 @@ npm run start
         
 ③. 针对本地服务器对域名服务器访问的跨域问题
         
-        找到当前项目congfig文件夹下index.js文件，然后在文件中将proxyTable内容改为：
-        `proxyTable: {
-        '/api': {
-            target: '[1]',
-            changeOrigin: true,
-            pathRewrite: {
-              '^/api': '/'
-            }
-          }
-        }
-        `
+*  找到当前项目congfig文件夹下index.js文件，然后在文件中将proxyTable内容改为：
+   `proxyTable: {
+      '/api': {
+      target: '[1]',
+      changeOrigin: true,
+      pathRewrite: {
+      '^/api': '/'
+      }
+     }
+    }
+    `
         [1]:就是你当前想访问的api地址，项目中访问的时候就只要用/api做反向代理即可
         
 ## 终于
