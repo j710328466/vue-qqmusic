@@ -30,7 +30,7 @@ npm run build --report
     * vuex(管理组件状态，实现组件通信）
     * webpack(打包工具)
     * es6、html5、css3
-    * exios（我等下要重点讲玩意儿..）
+    * exios（我等下要重点讲这玩意儿..）
 
 * 组件库 
 
@@ -46,7 +46,7 @@ npm run build --report
 
 * 各页面的跳转
 
-    ![](https://ooo.0o0.ooo/2017/06/11/593ce560987c0.gif)
+    ![](https://ooo.0o0.ooo/2017/06/14/5941312c7e08a.gif)
 
 ## 核心功能组件实现
 
