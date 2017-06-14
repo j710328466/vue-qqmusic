@@ -21,7 +21,7 @@ npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report
-
+```
 
 * 主要技术栈
 
@@ -46,7 +46,7 @@ npm run build --report
 
 * 各页面的跳转
 
-    ![](https://ooo.0o0.ooo/2017/06/14/59412958d13f9.gif)
+    ![](https://ooo.0o0.ooo/2017/06/14/5941312c7e08a.gif)
 
 ## 核心功能组件实现
 
