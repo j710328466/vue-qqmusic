@@ -3,6 +3,7 @@
 
 ## 效果预览
 部分地方不全部根据原版，也有自由发挥的
+
 ![](https://ooo.0o0.ooo/2017/06/14/59413438cfe15.gif)
 > 在线预览：[demo](https://github.com/j710328466/vue-qqmusic)
 
