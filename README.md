@@ -54,7 +54,7 @@ npm run start
 
 *  跳转功能
     
-![](https://ooo.0o0.ooo/2017/06/14/5941312c7e08a.gif)
+![](https://ooo.0o0.ooo/2017/06/14/59415a8cd0df7.gif)
     (目前子目录只开通歌手列表)
 
 
