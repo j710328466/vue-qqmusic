@@ -38,15 +38,8 @@ npm run start
 *  webpack(打包工具)
 *  scss（原来想用stylus,回头看看我都快写完了...）
 *  axios（我等下要重点讲这玩意儿..）![](https://ooo.0o0.ooo/2017/06/14/59413c23f2495.gif)
-    
-* 组件库 
-
-*  element-UI(本来想用muse-UI,感觉那个更cool，下次吧..)
-    
-* API 
-
-*  网易云音乐API（仿qq我用网易api，你怕不怕...）
-*  qq音乐API
+*  组件库: element-UI(本来想用muse-UI,感觉那个更cool，下次吧..) 
+*  API: 网易云音乐API（仿qq我用网易api，你怕不怕...）,qq音乐API
 
 ## 核心功能组件的实现
 
