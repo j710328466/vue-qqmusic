@@ -32,13 +32,13 @@ npm run start
  
 * 技术栈
 
->   * vue(数据绑定)
->   * vue-router
->   * vuex(管理组件状态，实现组件通信）
->   * webpack(打包工具)
->   * scss（原来想用stylus,回头看看我都快写完了...）
->   * axios（我等下要重点讲这玩意儿..）
->   
+  * vue(数据绑定)
+  * vue-router
+  * vuex(管理组件状态，实现组件通信）
+  * webpack(打包工具)
+  * scss（原来想用stylus,回头看看我都快写完了...）
+  * axios（我等下要重点讲这玩意儿..）
+   
 >    ![](https://ooo.0o0.ooo/2017/06/14/59413c23f2495.gif)
     
 * 组件库 
