@@ -36,7 +36,7 @@ npm run start
 *  vuex(管理组件状态，实现组件通信）
 *  webpack(打包工具)
 *  scss（原来想用stylus,回头看看我都快写完了...）
-*  axios（我等下要重点讲这玩意儿..）![](https://ooo.0o0.ooo/2017/06/14/59413c23f2495.gif)
+*  axios（我等下要重点讲这****）
 *  组件库: element-UI(本来想用muse-UI,感觉那个更cool，下次吧..) 
 *  API: 网易云音乐API(仿qq音乐我用网易云音乐的东西，你怕不怕...)
 
