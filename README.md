@@ -2,7 +2,8 @@
 一直想做一个vue项目 然后呢 我就做了
 
 ## 效果预览
-部分地方不全部根据原版，也有自由发挥的
+
+部分地方不全部根据原版，也有自由发挥的，目前功能模块比较简陋
 
 ![](https://ooo.0o0.ooo/2017/06/14/59413438cfe15.gif)
 > 在线预览：[demo](https://github.com/j710328466/vue-qqmusic)
@@ -28,9 +29,7 @@ npm run build --report
 
 # 网易云API listen localhost:3000
 npm run start 
-
 ```
- 
 ##  技术栈
 
 *  vue(数据绑定)
@@ -41,7 +40,8 @@ npm run start
 *  axios（我等下要重点讲这玩意儿..）![](https://ooo.0o0.ooo/2017/06/14/59413c23f2495.gif)
 *  组件库: element-UI(本来想用muse-UI,感觉那个更cool，下次吧..) 
 *  API: 网易云音乐API(仿qq音乐我用网易云音乐的东西，你怕不怕...)
-
+> (目前我没有买服务器，所以你需要到以下地方下载API文件，自己部署后台数据，十分抱歉)
+> [网易云音乐API](git@github.com:Binaryify/NeteaseCloudMusicApi.git)
 ## 核心功能组件的实现
 
 *  搜索功能
@@ -120,4 +120,4 @@ npm run start
  
  ![](https://ooo.0o0.ooo/2017/06/14/594148dc7c4f1.gif)
  
-## 最后，这是[我的简历]() 大三实习生，求职ing
+ * （最后，这是[我的简历]() 大三实习生，求职ing
