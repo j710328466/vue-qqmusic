@@ -40,8 +40,8 @@ npm run start
 *  axios（我等下要重点讲这玩意儿..）![](https://ooo.0o0.ooo/2017/06/14/59413c23f2495.gif)
 *  组件库: element-UI(本来想用muse-UI,感觉那个更cool，下次吧..) 
 *  API: 网易云音乐API(仿qq音乐我用网易云音乐的东西，你怕不怕...)
-> (目前我没有买服务器，所以你需要到以下地方下载API文件，自己部署后台数据，十分抱歉)
-> [网易云音乐API](git@github.com:Binaryify/NeteaseCloudMusicApi.git)
+*  (目前我没有买服务器，所以你需要到以下地方下载API文件，自己部署后台数据，十分抱歉)
+>  [网易云音乐API](https://github.com/Binaryify/NeteaseCloudMusicApi)
 ## 核心功能组件的实现
 
 *  搜索功能
