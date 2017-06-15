@@ -118,4 +118,4 @@ npm run start
  
  ![](https://ooo.0o0.ooo/2017/06/14/594148dc7c4f1.gif)
  
- * （最后，这是[我的简历](https://ooo.0o0.ooo/2017/06/15/59421a41342b0.png) 2018级毕业生，也可以在项目跟目录下载pdf文件，谢谢）
+ * （最后，这是[我的简历](https://github.com/j710328466/vue-qqmusic/blob/master/%E6%88%91%E7%9A%84%E7%AE%80%E5%8E%86.pdf) 2018级毕业生，也可以在项目跟目录下载pdf文件，谢谢）
