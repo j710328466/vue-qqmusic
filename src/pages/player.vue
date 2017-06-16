@@ -18,9 +18,9 @@
             <a href="" class="singer">{{songList[id].artists[0].name}}</a>
           </div>
           <div class="play_music_time">
-            <p class="startT">00:00 </p>
+            <p class="startT">00:00</p>
             -
-            <p class="endT">{{(songList[id].mMusic.playTime/60000).toFixed(2)}}</p>
+            <p class="endT">{{(transformTime(songList[id].mMusic.playTime/1000))}}</p>
           </div>
           <div class="player_progress">
             <div class="player_progress__inner">
@@ -43,12 +43,12 @@
         </div>
       </div>
     </div>
-    <audio :src="this.songUrl[0]" autoplay id="audio"></audio>
+    <audio :src="this.songUrl[0]" id="audio"></audio>
   </div>
 </template>
 
 <script>
-import {mapState} from 'vuex'
+import {mapState, mapAction} from 'vuex'
   export default {
     data () {
       return {
@@ -56,7 +56,6 @@ import {mapState} from 'vuex'
         audio: '',
         songUrl: []
       }
-      // audio: this.$store.state.audio
     },
     computed: {
       ...mapState([
@@ -70,11 +69,18 @@ import {mapState} from 'vuex'
           this.songUrl.push(res.data.data[0].url)
         })
         console.log(this.songUrl[0]);
+      this.audio = document.getElementById('audio')
+      console.log(this.audio);
     },
-    methods () {
-      // play: function() {
-      //   this.id
-      // }
+    methods: {
+      transformTime: function(seconds) {
+        let m, s;
+        m = Math.floor(seconds / 60);
+        m = m.toString().length == 1 ? ('0' + m) : m;
+        s = Math.floor(seconds - 60 * m);
+        s = s.toString().length == 1 ? ('0' + s) : s;
+        return m + ':' + s;
+      }
     }
   }
 </script>

@@ -37,7 +37,7 @@
                 </div>
               </div>
               <p class="songAlbum">{{item.album.name}}</p>
-              <p class="songTime">{{(item.mMusic.playTime/60000).toFixed(2)}}分钟</p>
+              <p class="songTime">{{transformTime(item.mMusic.playTime/1000)}}</p>
             </li>
           </ul>
         </div>
@@ -52,7 +52,8 @@ import {mapState} from 'vuex'
   export default {
     data () {
       return {
-        download: false
+        download: false,
+        totalTime: ''
       }
     },
     computed: {
@@ -61,7 +62,7 @@ import {mapState} from 'vuex'
       ])
     },
     mounted () {
-
+      this.totalTime = this.transformTime(this.songList.Mmusic.play)
     },
     methods: {
       iconShow: function () {
@@ -69,7 +70,14 @@ import {mapState} from 'vuex'
       },
       playSong: function() {
         console.log(this.songList[1])
-
+      },
+      transformTime: function(seconds) {
+        let m, s;
+        m = Math.floor(seconds / 60);
+        m = m.toString().length == 1 ? ('0' + m) : m;
+        s = Math.floor(seconds - 60 * m);
+        s = s.toString().length == 1 ? ('0' + s) : s;
+        return m + ':' + s;
       }
     }
   }
@@ -215,9 +223,9 @@ import {mapState} from 'vuex'
       float: left;
     }
     .songTime {
-      font-size: 12px;
+      font-size: 14px;
       float: right;
-      margin-right: 102px;
+      margin-right: 114px;
       color: #999;
     }
   }
