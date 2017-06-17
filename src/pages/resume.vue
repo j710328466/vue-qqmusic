@@ -17,7 +17,7 @@
         </div>
       </div>
       <div class="jzxer-desc">
-        <h1>2018级毕业生求前端实习</h1>
+        <h1>大三求前端实习中...</h1>
         <div><p>rocker. JS</p></div>
       </div>
     </div>

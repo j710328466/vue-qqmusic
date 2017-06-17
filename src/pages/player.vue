@@ -43,7 +43,7 @@
         </div>
       </div>
     </div>
-    <audio :src="this.songUrl[0]" id="audio"></audio>
+    <audio :src="this.songUrl[0]" autoplay id="audio"></audio>
   </div>
 </template>
 
@@ -64,13 +64,14 @@ import {mapState, mapAction} from 'vuex'
     },
     mounted() {
       this.id = this.$route.params.id
-      this.axios.get(`http://localhost:3000/music/url?id=${this.songList[this.id].id}`)
+      this.axios.get(`http://182.254.147.168:3000/music/url?id=${this.songList[this.id].id}`)
         .then(res => {
+          // console.log(res.data.data[0].url);
           this.songUrl.push(res.data.data[0].url)
         })
-        console.log(this.songUrl[0]);
-      this.audio = document.getElementById('audio')
-      console.log(this.audio);
+        // console.log(this.songUrl);
+      // this.audio = document.getElementById('audio')
+      // console.log(this.audio);
     },
     methods: {
       transformTime: function(seconds) {

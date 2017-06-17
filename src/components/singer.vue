@@ -37,8 +37,8 @@
     },
     mounted() {
       this.$store.commit('changeTagIndex', 2)
-      
-      this.axios.get(`http://localhost:3000/top/artists`)
+
+      this.axios.get(`http://182.254.147.168:3000/top/artists`)
         .then(res => {
           res.data.artists.map(item => {
             this.$store.commit('save_singer', res.data.artists)

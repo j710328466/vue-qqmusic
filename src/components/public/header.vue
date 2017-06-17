@@ -127,12 +127,11 @@ import {mapActions, mapState} from 'vuex'
       search: function (keyword) {
         if (keyword.trim()) {
           console.log('获得数据')
-          this.axios.get(`http://localhost:3000/search?keywords=${keyword}`)
+          this.axios.get(`http://182.254.147.168:3000/search?keywords=${keyword}`)
             .then(res => {
               // console.log(res.data.result.songs);
               this.$store.commit('save_songList', res.data.result.songs)
               this.$router.push({path: '/artList', query: {keyword: this.keyword}})
-              console.log(this.songList)
             })
 
         } else {
