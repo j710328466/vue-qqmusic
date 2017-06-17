@@ -8,6 +8,7 @@
 
 
 > 项目地址：[github](https://github.com/j710328466/vue-qqmusic)
+> 预览地址：[demo](http://182.254.147.168:8564/#/)
 
 ## Build Setup
 
