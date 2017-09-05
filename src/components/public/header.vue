@@ -112,7 +112,7 @@ import {mapActions, mapState} from 'vuex'
       }
     },
     mounted () {
-      console.log(this.$route.path)
+      console.log(this)
       console.log(this.$store.state)
     },
     computed: {

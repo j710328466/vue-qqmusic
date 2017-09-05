@@ -3,7 +3,7 @@
 
 ## 效果预览
 
-部分地方不全部根据原版，也有自由发挥的，目前功能模块比较简陋，要完整显示效果必须接入后端数据，请下载以下api文件并打开
+部分地方不全部根据原版，也有自由发挥的，目前功能模块比较简陋，如果不能正常显示，请下载以下api文件并打开
 >  [网易云音乐API](https://github.com/Binaryify/NeteaseCloudMusicApi)
 
 
@@ -29,7 +29,7 @@ npm run build
 npm run build --report
 
 # 网易云API部署 listen localhost:3000
-npm run start 
+npm run start
 ```
 ##  技术栈
 
@@ -39,7 +39,7 @@ npm run start
 *  webpack(打包工具)
 *  scss（原来想用stylus,回头看看我都快写完了...）
 *  axios（我等下要重点讲这****）
-*  组件库: element-UI(本来想用muse-UI,感觉那个更cool，下次吧..) 
+*  组件库: element-UI(本来想用muse-UI,感觉那个更cool，下次吧..)
 *  API: 网易云音乐API(仿qq音乐我用网易云音乐的东西，你怕不怕...)
 
 ## 核心功能组件的实现
@@ -54,7 +54,7 @@ npm run start
     (播放页面正在完善中，样式只是大概，待细化...)
 
 *  跳转功能
-    
+
 ![](https://ooo.0o0.ooo/2017/06/14/59415a8cd0df7.gif)
     (目前子目录只开通歌手列表)
 
@@ -75,9 +75,9 @@ npm run start
 *  跨域访问，简单来说就是 A 网站的 javascript 代码试图访问 B 网站，包括提交内容和获取内容。由于安全原因，跨域访问是被各大浏览器所默认禁止的。
     
 ①. 针对本地相同端口服务器之间的跨域
-   
+
 *  这是我刚开始碰到问题时使用的第一种，这个时候你只需要找到build文件中的dev-server，找到引用express的位置，给它加上一个头文件：
-    ``` 
+    ```
     app.all('*', function (req, res, next) {
     res.header("Access-Control-Allow-Credentials", true)
     res.header("Access-Control-Allow-Origin", "*")
@@ -88,17 +88,17 @@ npm run start
     next()
     })
     ```
-        
+
 >  ![](https://ooo.0o0.ooo/2017/06/14/594140894d162.jpg)
 
 *  然后它就会报错~，具体原因是你同一个端口申请相同端口的东西,不好意思，那不叫跨域...
 <br>       
 ②. 针对本地不同端口的服务器之间的跨域
-     
+
 *  就是将上面的头文件放在当前项目申请的服务器的那个api中。
 <br>        
 ③. 针对本地服务器对域名服务器访问的跨域问题
-        
+
 *  找到当前项目congfig文件夹下index.js文件，然后在文件中将proxyTable内容改为：
    ```
    proxyTable: {
@@ -112,13 +112,13 @@ npm run start
     }
     ```
  *  就是你当前想访问的api地址，项目中访问的时候就只要用/api做反向代理即可
-        
+
 ## 终于
 
 *  这是我第一个用vue撸的项目，可能功能有点简陋，很多地方有待提高，不过这次实践让我对组件化的理解有了一定的提升，后期会继续加入其它功能模块的，文中有用词不对的地方，欢迎大家指出，项目有什么bug，也希望大家多多提issue
- 
+
 *  如果你帮到了你，给个star吧
- 
- 
+
+
  * （最后，这是[我的简历](https://github.com/j710328466/vue-qqmusic/blob/master/%E6%88%91%E7%9A%84%E7%AE%80%E5%8E%86.pdf) 2018级毕业生，也可以在项目跟目录下载pdf文件，谢谢）
  ![](https://ooo.0o0.ooo/2017/06/14/594148dc7c4f1.gif)

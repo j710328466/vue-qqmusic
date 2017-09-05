@@ -31,7 +31,7 @@
       }
     },
     mounted () {
-      this.axios.get(`http://localhost:3000/banner`)
+      this.axios.get(`http://182.254.147.168:3000/banner`)
        .then(res => {
           res.data.banners.forEach(item => {
            this.banner.push(item)

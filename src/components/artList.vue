@@ -140,8 +140,8 @@ import {mapState} from 'vuex'
       color: #999;
       padding-left: 30px;
       padding-right: 100px;
-      background-color: #cdcdcd;
-      box-shadow: 0 1.5px 2px rgba(0, 0, 0, .4);
+      background-color: #f4f2f2;
+      box-shadow: 0 1.5px 2px rgba(0, 0, 0, .2);
     }
     .songlist__header_name {
       float: left;
@@ -170,8 +170,8 @@ import {mapState} from 'vuex'
       height: 50px;
       line-height: 50px;
       &:nth-child(even) {
-        background-color: #cdcdcd;
-        box-shadow: 0 1.5px 2px rgba(0, 0, 0, .4);
+        background-color: #f4f2f2;
+        box-shadow: 0 1.5px 2px rgba(0, 0, 0, .2);
       }
     }
     .mod_list_menu {

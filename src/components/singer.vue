@@ -33,11 +33,9 @@
         singer: ''
       }
     },
-    computed () {
-    },
     mounted() {
+      console.log(this)
       this.$store.commit('changeTagIndex', 2)
-
       this.axios.get(`http://182.254.147.168:3000/top/artists`)
         .then(res => {
           res.data.artists.map(item => {
