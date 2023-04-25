@@ -1,0 +1,45 @@
+.singer {
+    padding: 25px 50px;
+    background-color: #f2f2f2;
+    &_search {
+        padding: 32px;
+        background-color: #fff;
+        &__words {
+            &___word {
+                display: inline-block;
+                margin-right: 24px;
+                margin-bottom: 12px;
+                padding: 3px 6px;
+                cursor: pointer;
+                // background-color: #31c27c;
+                ::v-deep .n-radio__dot-wrapper { 
+                    display: none;
+                }
+            }
+            ::v-deep .n-radio--checked .n-radio__label {
+                color: #fff;
+                background-color: #31c27c;
+            }
+        }
+    }
+    .n-grid {
+        margin-top: 20px;
+    }
+    &_member {
+        text-align: center;
+        background-color: #fff;
+        border-radius: 6px;
+        &__pic {
+            margin-top: 12px;
+            width: 140px;
+            height: 140px;
+            border-radius: 99px;
+        }
+        &__name {
+            margin-top: 12px;
+            padding-bottom: 32px;
+            text-align: center;
+            color: #000;
+        }
+    }
+}

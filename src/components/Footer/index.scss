@@ -1,0 +1,29 @@
+.footer {
+    min-width: 900px;
+    background-color: #333;
+    &_list {
+        margin: 0 50px;
+        &__item {
+            display: inline-block;
+            vertical-align: top;
+            &___tit {
+                margin: 20px;
+                padding: 80px 0 30px;
+                color: #999;
+                font-size: 15px;
+            }
+            &___list {
+                display: flex;
+                align-items: center;
+                text-align: center;
+                &____item {
+                    width: 80px;
+                    color: #999;
+                    &_____icon {
+                        font-size: 37px;
+                    }
+                }
+            }
+        }
+    }
+}

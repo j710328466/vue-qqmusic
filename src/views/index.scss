@@ -1,0 +1,189 @@
+.home {
+    .songList {
+        background-image: url('@/assets/bg-grad.webp');
+        background-size: 100% 100%;
+        &_tit {
+            padding-top: 4.2%;
+            padding-bottom: 2%;
+            font-size: 30px;
+            color: #000;
+            letter-spacing: 6px;
+            text-align: center;
+        }
+        &_subtit {
+            margin-bottom: 32px;
+            &__nav {
+                display: flex;
+                justify-content: center;
+                color: #000;
+                &___item {
+                    margin: auto 24px;
+                    font-size: 15px;
+                    color: #000;
+                    cursor: pointer;
+                    &:hover {
+                        color: #31c27c;
+                        background-color: transparent;
+                    }
+                    &-active {
+                        color: #31c27c;
+                    }
+                }
+            }
+        }
+        .n-carousel__dot {
+            display: none;
+        }
+        .n-carousel .n-carousel__dots .n-carousel__dots--dot .n-carousel__dot {
+            width: 8px;
+            height: 8px;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+        .carousel-cont {
+            display: flex;
+            padding: 0 50px;
+            width: 100%;
+            text-align: center;
+            height: 300px;
+            object-fit: cover;
+            .n-carousel--bottom .n-carousel__dots {
+                .n-carousel__dot {
+                    width: 8px;
+                    height: 8px;
+                }
+            }
+        }
+        .carousel_cont__item {
+            flex: 1;
+            &___cover {
+                position: relative;
+                width: 164px;
+                height: 164px;
+                overflow: hidden;
+                transition: 0.7 ease;
+                &____play {
+                    position: absolute;
+                    width: 70px;
+                    height: 70px;
+                    top: 50%;
+                    left: 50%;
+                    opacity: 0;
+                    transform: translate(-50%, -50%) scale(.7) translateZ(0);
+                    transition-property: opacity,transform;
+                    transition-duration: .5s;
+                }
+                &:hover {
+                    .carousel_cont__item___cover____play {
+                        display: block;
+                        opacity: 1;
+                        transform: translate(-50%, -50%) scale(1) translateZ(0);
+                        transition-property: opacity, transform;
+                        transition-duration: .5s;
+                        cursor: pointer;
+                    }
+                }
+                &____img {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    transform: scale(1);
+                    transition: 0.5s all;
+                    opacity: 1;
+                    &:hover {
+                        transform: scale(1.1);
+                        transition: 0.5 ease-out;
+                        opacity: 0.8;
+                        &::after {
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            content: '123';
+                            font-size: 30px;
+                            color: #000;
+                        }
+                    }
+                }
+            }
+            &___name {
+                margin: auto;
+                margin-top: 12px;
+                width: 164px;
+                color: #000;
+                text-align: left;
+            }
+            &___count {
+                margin: auto;
+                color: #999;
+                width: 164px;
+                text-align: left;
+            }
+        }
+        .newSong {
+            position: relative;
+            display: flex;
+            &_l {
+                display: inline-table;
+                position: relative;
+                margin-right: 8px;
+                width: 86px;
+                height: 86px;
+                overflow: hidden;
+                &:hover {
+                    opacity: 0.8;
+                    transition: 0.5s all ease;
+                    .newSong_l__img {
+                        transform: scale(1.07) translateZ(0);
+                        transition: transform .75s cubic-bezier(0,1,.75,1);
+                        transition: 0.5s all ease;
+                    }
+                    .newSong_l__play {
+                        opacity: 1;
+                        transform: translate(-50%, -50%) scale(1) translateZ(0);
+                        transition-property: opacity, transform;
+                        transition-duration: .5s;
+                        cursor: pointer;
+                    }
+                }
+                &__img {
+                    width: 86px;
+                    height: 86px;
+                    transform: scale(1) translateZ(0);
+                    transition: transform .75s;
+                }
+                &__play {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    width: 49px;
+                    height: 49px;
+                    opacity: 0;
+                    transform: translate(-50%, -50%) scale(.7) translateZ(0);
+                    transition-property: opacity,transform;
+                    transition-duration: .5s;
+                }
+            }
+            &_r {
+                h3 {
+                    font-size: 14px;
+                    max-width: 60%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                p {
+                    max-width: 80%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    text-align: left;
+                    color: #ccc;
+                }
+            }
+            &_share {
+                position: absolute;
+                bottom: 2px;
+                right: 32px;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+@import './base.css';
+
+#app {
+  width: 100%;
+  max-width: 1280px;
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+}
+
+@media (hover: hover) {
+  a:hover {
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+  }
+
+  #app {
+  }
+}
